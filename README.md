@@ -45,13 +45,14 @@ The following instructions will get you a copy of the project up and running on 
 ## Tasks
 ### Task1: Create DWH and use a daily feed with the rolling last n flight days
 
-The source can correct records from the most recent 7 flight days. I would therefore require a minimum rolling window of 7 days, but I would prefer a 14-day feed if the source supports it. The additional 7 days provide a recovery and validation buffer for pipeline failures, delayed processing, and late-arriving corrections. \
+The source can correct records from the most recent 7 flight days. \
+I would therefore require a minimum rolling window of 7 days, but I would prefer a 14-day feed if the source supports it.  
+The additional 7 days provide a recovery and validation buffer for pipeline failures, delayed processing, and late-arriving corrections. \
 I would validate that the feed contains the expected date range and reprocess the authoritative correction window rather than blindly appending records.
 
 ### Task2: Create flights availability dataset
 
 I created a view to be able to see the flight availability and query that each day after the daily feed has updated the DWH.
-
 
 ## Further ideas and Improvements
 - Setup Airflow to orchestrate the ETL pipeline and future daily incremental loads
