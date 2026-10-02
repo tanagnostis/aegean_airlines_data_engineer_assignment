@@ -29,17 +29,17 @@ The following instructions will get you a copy of the project up and running on 
 - Server setup:
   - hostname/address: postgres
   - port: 5432
-  -  database = flights_db \
-  -  user = flights_db_user \
+  -  database = flights_db
+  -  user = flights_db_user
   -  password = flights_db_password
 
 2) You can access the PostgreSQL database on any other RDBMS to see and query the populated tables.
 
-- Login details: \
-- host = localhost \
-- port = 5434 \
-- database = flights_db \
-- user = flights_db_user \
+- Login details:
+- host = localhost
+- port = 5434
+- database = flights_db
+- user = flights_db_user
 - password = flights_db_password
 
 ## Tasks
