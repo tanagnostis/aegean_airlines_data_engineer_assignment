@@ -12,7 +12,12 @@ The final warehouse follows a Kimball-style dimensional model optimized for anal
 
 # Folder structure and description
 **code**: Contains a Jupyter Notebook with initial data exploration and Python modules to setup the ETL pipeline, the DWH and database connection.\
-**data**: Contains the initial CSV file from https://www.kaggle.com/usdot/flight-delays?select=flights.csv. The data will be extracted from that file.\
+**data**: Contains the initial CSV file from https://www.kaggle.com/usdot/flight-delays?select=flights.csv. \ 
+The data will be extracted from that file.\
+There are 2 subfolders: 
+- historical_data (Conatins the original data file with the full data of year 2015).
+- daily_feed (Contains the daily feed with the corrected/updated data of 7 days from 2015-01-01 to 2015-01-07).
+  
 **docker-compose.yaml**: designed to create and install the PostgreSQL database and run the ETL pipeline.
 
 Make sure to have Python, Docker and Docker Compose to be able to setup and run this ETL pipeline on your machine.
