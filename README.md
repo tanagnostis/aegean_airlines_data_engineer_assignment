@@ -9,21 +9,24 @@ This project implements an end-to-end data engineering pipeline that extracts US
 The final warehouse follows a Kimball-style dimensional model optimized for analytics and reporting.
 
 ---
+# Instructions
+
+Make sure to have Python, Docker and Docker Compose to be able to setup and run this ETL pipeline on your machine.
+The following instructions will get you a copy of the project up and running on your local machine.
+1) Clone the repo: `git@github.com:tanagnostis/aegean_airlines_data_engineer_assignment.git`
+2) Download the CSV file (https://www.kaggle.com/usdot/flight-delays?select=flights.csv) and store it in data/historical_data folder/directory
+3) To start all the containers and services run: `docker compose up -d`
 
 # Folder structure and description
 **code**: Contains a Jupyter Notebook with initial data exploration and Python modules to setup the ETL pipeline, the DWH and database connection.\
 **data**: Contains the initial CSV file from https://www.kaggle.com/usdot/flight-delays?select=flights.csv. \ 
 The data will be extracted from that file.\
 There are 2 subfolders: 
-- historical_data (Conatins the original data file with the full data of year 2015).
+- historical_data (Contains the original data file with the full data of year 2015).
 - daily_feed (Contains the daily feed with the corrected/updated data of 7 days from 2015-01-01 to 2015-01-07).
   
 **docker-compose.yaml**: designed to create and install the PostgreSQL database and run the ETL pipeline.
 
-Make sure to have Python, Docker and Docker Compose to be able to setup and run this ETL pipeline on your machine.
-The following instructions will get you a copy of the project up and running on your local machine.
-1) Clone the repo: `git@github.com:tanagnostis/aegean_airlines_data_engineer_assignment.git`
-2) To start all the containers and services: `docker compose up -d`
 
 ## Database PostgreSQL
 1) To access the database through pgadmin.
