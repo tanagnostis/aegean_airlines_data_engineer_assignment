@@ -10,6 +10,7 @@ from code.etl.extract import extract_csv
 from code.etl.transform import transform
 from code.etl.load import load_chunk
 from code.db_update.daily_feed_update import run_daily_feed_update
+from code.etl.availability_view import setup_availability_view
 
 
 logger = logging.getLogger(__name__)
@@ -83,6 +84,10 @@ def run_pipeline():
     # Execute script for daily feed update.
     run_daily_feed_update(engine)
     logger.info("Daily feed update completed.")
+
+    # Execute script for availability view setup.
+    setup_availability_view()
+    logger.info("Availability view setup completed.")
 
 if __name__ == "__main__":
     logging.basicConfig(

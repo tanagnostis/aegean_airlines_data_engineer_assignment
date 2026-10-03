@@ -12,8 +12,8 @@ WITH flight_intervals AS (
         ON d.date_key = f.date_key
     JOIN dwh.dim_airline a
         ON a.airline_key = f.airline_key
-    WHERE
-        f.cancelled = 0
+    WHERE full_date BETWEEN '2015-01-01' AND '2015-01-14'  
+        AND f.cancelled = 0
         AND f.diverted = 0
         AND f.actual_departure_ts IS NOT NULL
         AND f.actual_arrival_ts IS NOT NULL
