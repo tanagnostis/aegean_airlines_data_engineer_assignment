@@ -18,7 +18,7 @@ def extract_csv_delimiter(data_path: str, filename: str) -> str:
         str:        Delimiter used in the csv file.
     """
     with open(f"{data_path}/{filename}", newline='', encoding = "utf-8") as csvfile:
-        dialect = csv.Sniffer().sniff(csvfile.read()) # Checking the separator and use that for the pandas read_csv function
+        dialect = csv.Sniffer().sniff(csvfile.read(8192)) # Checking the separator and use that for the pandas read_csv function
         logging.info("File %s has delimiter/separator: '%s'", filename, dialect.delimiter)
         file_size = os.path.getsize(f"{data_path}/{filename}") # Checking file size
         logging.info("File size: %d KB", round(file_size/1024))

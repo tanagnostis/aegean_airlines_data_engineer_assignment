@@ -86,7 +86,7 @@ def run_pipeline():
     logger.info("Daily feed update completed.")
 
     # Execute script for availability view setup.
-    setup_availability_view()
+    setup_availability_view(engine)
     logger.info("Availability view setup completed.")
 
 if __name__ == "__main__":

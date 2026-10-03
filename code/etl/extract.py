@@ -84,7 +84,7 @@ def extract_csv_chunks(data_path: str, filename: str) -> Iterator[tuple[int, pd.
     # 3. Read CSV in chunks
     # ---------------------------------------------------------
     try: 
-        chunks = pd.read_csv(file_path, dtype = dtype_mapping, sep=delimiter, chunksize=CHUNK_SIZE, low_memory=False, encoding='utf-8') 
+        chunks = pd.read_csv(file_path, dtype = dtype_mapping, sep = delimiter, chunksize=CHUNK_SIZE, low_memory=False, encoding='utf-8') 
         total_rows = 0 
         for chunk_number, df in enumerate(chunks, start=1): 
             rows, columns = df.shape 
