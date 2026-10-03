@@ -60,7 +60,7 @@ I would validate that the feed contains the expected date range and reprocess th
 
 ### Task2: Create flights availability dataset
 
-I created a view to be able to see the flight availability and query that each day after the daily feed has updated the DWH.
+I created a view (dwh.flights_availability) to be able to see the flight availability and query that each day after the daily feed has updated the DWH.
 
 ## Further ideas and Improvements
 - Setup Airflow to orchestrate the ETL pipeline and future daily incremental loads
