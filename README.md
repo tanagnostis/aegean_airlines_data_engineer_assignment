@@ -30,7 +30,7 @@ There are 2 subfolders:
 
 ## Database PostgreSQL
 1) To access the database through pgadmin.
-- Go to: [pdadmin](http://localhost:8080)
+- Go to: [pgadmin](http://localhost:8080)
 - Access details:
   - username: flights@domain.com
   - password: flights26
